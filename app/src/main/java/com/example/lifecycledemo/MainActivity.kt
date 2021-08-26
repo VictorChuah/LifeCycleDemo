@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import com.example.lifecycledemo.model.QuestionModel
+import com.example.lifecycledemo.model.QuestionModel.Companion.getInstance
 
 class MainActivity : AppCompatActivity() {
     private lateinit var myModel :QuestionModel
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 //        myModel = ViewModelProvider(this).get(QuestionModel::class.java)
-        myModel = QuestionModel.getInstance()
+        myModel = getInstance()
 
         val btn : Button = findViewById(R.id.btnNext)
 
